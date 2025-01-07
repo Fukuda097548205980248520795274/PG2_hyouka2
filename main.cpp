@@ -20,7 +20,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	---------------*/
 
 	// プレイヤー
-	Player* player = new Player(static_cast<float>(kScreenWidth / 2), static_cast<float>(kScreenHeight / 2));
+	Player* player = new Player(640.0f, 360.0f);
 
 
 	// ウィンドウの×ボタンが押されるまでループ
@@ -37,6 +37,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 
 		player->MoveOperation(keys, preKeys);
+		player->ShotOperation(keys, preKeys);
 
 		///
 		/// ↑更新処理ここまで
